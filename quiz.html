@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz Section</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(270deg, #0077be, #00aaff, #004d73);
+			background-size: 800% 800%;
+			animation: gradientBG 15s ease infinite;
+			color: white;
+		}
+
+		@keyframes gradientBG {
+			0% { background-position: 0% 50%; }
+			50% { background-position: 100% 50%; }
+			100% { background-position: 0% 50%; }
+		}
+
+		header {
+			text-align: center;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		header h1 {
+			margin: 0;
+			font-size: 2.5rem;
+		}
+
+		main {
+			max-width: 800px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		h2 {
+			text-align: center;
+			color: #1fccce;
+		}
+
+		.question {
+			margin-bottom: 20px;
+		}
+
+		.question p {
+			font-size: 1.2rem;
+		}
+
+		.question input {
+			margin-right: 10px;
+		}
+
+		button {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			font-size: 1rem;
+			color: white;
+			background-color: #1fccce;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #17a2b8;
+		}
+
+		.result {
+			text-align: center;
+			font-size: 1.5rem;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Quiz Section</h1>
+	</header>
+	<main>
+		<h2>Test Your Knowledge</h2>
+		<form id="quizForm">
+			<!-- Question 1 -->
+			<div class="question">
+				<p>1. What is the capital of France?</p>
+				<label><input type="radio" name="q1" value="Paris"> Paris</label><br>
+				<label><input type="radio" name="q1" value="London"> London</label><br>
+				<label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+			</div>
+
+			<div class="question">
+				<p>2. What is 5 + 3?</p>
+				<label><input type="radio" name="q2" value="8"> 8</label><br>
+				<label><input type="radio" name="q2" value="10"> 10</label><br>
+				<label><input type="radio" name="q2" value="6"> 6</label>
+			</div>
+
+			<div class="question">
+				<p>3. Which planet is known as the Red Planet?</p>
+				<label><input type="radio" name="q3" value="Mars"> Mars</label><br>
+				<label><input type="radio" name="q3" value="Venus"> Venus</label><br>
+				<label><input type="radio" name="q3" value="Jupiter"> Jupiter</label>
+			</div>
+
+			<button type="button" onclick="checkAnswers()">Submit</button>
+		</form>
+		<div class="result" id="result"></div>
+	</main>
+	<script>
+		function checkAnswers() {
+			const answers = {
+				q1: "Paris",
+				q2: "8",
+				q3: "Mars"
+			};
+
+			// Get user answers
+			let score = 0;
+			const form = document.getElementById('quizForm');
+			const resultDiv = document.getElementById('result');
+
+			for (const question in answers) {
+				const userAnswer = form[question].value;
+				if (userAnswer === answers[question]) {
+					score++;
+				}
+			}
+
+			resultDiv.textContent = `You scored ${score} out of ${Object.keys(answers).length}!`;
+		}
+	</script>
+</body>
+</html>

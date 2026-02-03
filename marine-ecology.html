@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marine Ecology</title>
+	<style>
+		body {
+			background: linear-gradient(270deg, #0077be, #00aaff, #004d73, #002f4f, #1fccce, #08edf0, #02D8E9);
+			background-size: 800% 800%;
+			animation: seaColors 15s ease infinite;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			color: white;
+		}
+
+		@keyframes seaColors {
+			0% { background-position: 0% 50%; }
+			50% { background-position: 100% 50%; }
+			100% { background-position: 0% 50%; }
+		}
+
+		header {
+			text-align: center;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		header h1 {
+			margin: 0;
+			font-size: 2.5rem;
+		}
+
+		main {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+			padding: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		section {
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 10px;
+			padding: 20px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		section h2 {
+			margin-top: 0;
+			font-size: 1.8rem;
+			color: #1fccce;
+		}
+
+		section p {
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+
+		.image-section img {
+			width: 100%;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		.jobs-section ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.jobs-section li {
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+		}
+
+		.jobs-section li span {
+			font-weight: bold;
+			color: #1fccce;
+		}
+
+		footer {
+			text-align: center;
+			padding: 10px;
+			background-color: rgba(0, 0, 0, 0.5);
+			margin-top: 20px;
+		}
+
+		footer p {
+			margin: 0;
+			font-size: 0.9rem;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Marine Ecology</h1>
+	</header>
+	<main>
+		<section>
+			<h2>About Marine Ecology</h2>
+			<p>Marine ecology is the study of the interactions between marine organisms and their environment. It encompasses ecosystems such as coral reefs, mangroves, and the deep sea, and explores the relationships between species and their habitats.</p>
+		</section>
+
+		<section class="image-section">
+			<h2>Marine Life</h2>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg" alt="Marine Life">
+		</section>
+
+		<section class="jobs-section">
+			<h2>Jobs in Marine Ecology</h2>
+			<ul>
+				<li><span>Marine Biologist:</span> Research marine organisms and their ecosystems. <span>Salary:</span> $50,000 - $90,000/year</li>
+				<li><span>Oceanographer:</span> Study the physical and chemical properties of the ocean. <span>Salary:</span> $60,000 - $100,000/year</li>
+				<li><span>Environmental Consultant:</span> Advise on marine conservation projects. <span>Salary:</span> $45,000 - $85,000/year</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Average Salaries</h2>
+			<p>The average salary for professionals in marine ecology varies depending on the role and experience. Entry-level positions start at around $45,000/year, while senior roles can exceed $100,000/year.</p>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Marine Ecology. All rights reserved.</p>
+	</footer>
+</body>
+</html>
